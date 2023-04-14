@@ -45,7 +45,6 @@ const generateImage = async (hex, text, imgBuffer) => {
   // Create a new Jimp image object with the specified background color and dimensions
   const jimpImg = new Jimp(WIDTH, HEIGHT, hex);
   const fontPath = path.join(
-    process.cwd(),
     "data",
     "font",
     "OnBcukLVpLJksloVQuiwrbM5.ttf.fnt"
