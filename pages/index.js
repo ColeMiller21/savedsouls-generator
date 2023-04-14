@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
   const [tokenId, setTokenId] = useState(null);
   const [imageSrc, setImageSrc] = useState(null);
 
@@ -14,14 +15,12 @@ export default function Home() {
   const generateImage = async (event) => {
     event.preventDefault();
     if (!tokenId) return;
-    console.log({ tokenId });
-
+    setLoading(true);
     // Make a request to the API route to generate the image.
     const response = await fetch(`/api/generate?id=${tokenId}`);
-    console.log(response.blob);
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
-    console.log({ url });
+    setLoading(false);
     setImageSrc(url);
   };
   return (
@@ -51,7 +50,7 @@ export default function Home() {
             onClick={generateImage}
             className="border border-[#FEFFFE] w-[175px] h-[60px] grouch hover:border-[#FF7733] hover:text-[#FF7733] transition-all duration-300 "
           >
-            Generate Image
+            {loading ? "Generating..." : "Generate Image"}
           </button>
           {imageSrc && (
             <img
