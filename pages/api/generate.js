@@ -2,6 +2,7 @@ const { default: axios } = require("axios");
 const { config } = require("../../web3/config");
 const Jimp = require("jimp");
 const { getContract } = require("../../web3/getContract");
+const path = require("path");
 
 export default async function handler(req, res) {
   let { id } = req.query;
@@ -43,11 +44,14 @@ const generateImage = async (hex, text, imgBuffer) => {
   image.resize(250, 250);
   // Create a new Jimp image object with the specified background color and dimensions
   const jimpImg = new Jimp(WIDTH, HEIGHT, hex);
-
-  // Load the desired fognt
-  let font = await Jimp.loadFont(
-    "./data/font/OnBcukLVpLJksloVQuiwrbM5.ttf.fnt"
+  const fontPath = path.join(
+    process.cwd(),
+    "data",
+    "font",
+    "OnBcukLVpLJksloVQuiwrbM5.ttf.fnt"
   );
+  // Load the desired fognt
+  let font = await Jimp.loadFont(fontPath);
   // Add the text to the image at the top center position
   jimpImg.print(
     font,
