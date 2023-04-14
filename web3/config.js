@@ -1,0 +1,38 @@
+const config = {
+  backgrounds: {
+    Orange: "#FDAD84",
+    Yellow: "#FEC78A",
+    Green: "#609994",
+    Black: "#222427",
+    Pink: "#FF9AB8",
+    Blue: "#B3D6F0",
+  },
+  text: {
+    Blackout: "Hasta La Vista",
+    "Vintage Shades": "Out There",
+    Happy: "happy",
+    Classy: "As Expected",
+    "Water Works": "Never Been Better",
+    Dumb: "What\u0027s it to you?",
+    Sleepy: "Tired AF",
+    Nerd: "It\u0027s Simple Really",
+    Squint: "A soul is worth a thousand jpgs.",
+    Cyclist: "Winning",
+    Hipster: "Go Hard",
+    "Thick Rims": "Ayoooo!!",
+    "Circle Golds": "Saving Souls is easy, keepin em saved…",
+    "What you say": "nevermind",
+    "3D": "Popcorn and Movies",
+    Baked: "wut",
+    Goggles: "Can\u0027t save souls without getting wet.",
+    "Eye Patch": "Troublemaker",
+    "Rose Tinted Golds": "Fancy AF",
+    Closed: "#saved",
+    Future: "No, trust me, I know.",
+    "Wide Eyed": "#lol",
+    "Seeing Red": "Don\u0027t save me.",
+    Angry: "$&#* it.",
+  },
+};
+
+module.exports = { config };
