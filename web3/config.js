@@ -31,7 +31,7 @@ const config = {
     Future: "No, trust me, I know.",
     "Wide Eyed": "#lol",
     "Seeing Red": "Don\u0027t save me.",
-    Angry: "$&#* it.",
+    Angry: "F&#* it.",
   },
 };
 
