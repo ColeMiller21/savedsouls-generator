@@ -33,7 +33,7 @@ export default function Home() {
           product
         </p>
       </header>
-      <div className="w-[90%] lg:w-[50%] border border-[#FEFFFE] min-h-[200px] flex flex-col items-center justify-center mb-[100px]">
+      <div className="w-[90%] lg:w-[50%] border border-[#FEFFFE] min-h-[200px] flex flex-col items-center justify-center">
         {" "}
         <div className="flex flex-col items-center gap-[.7rem]">
           <p className="grouch">Input a Token ID</p>
@@ -59,6 +59,48 @@ export default function Home() {
               alt="ss"
             />
           )}
+        </div>
+      </div>
+      <p>PSA: Cannot generate 1/1 - Errors may not be handled</p>
+      <div className="w-full flex flex-col items-center justify-center mb-[20px] text-center">
+        <h2 className="mb-[20px] grouch text-[1.75rem]">
+          Created by community members
+        </h2>
+        <div className="flex flex-col md:flex-row w-full justify-center items-center gap-[1.5rem]">
+          <div className="flex items-center gap-[.5rem]">
+            <img
+              src="/img-bones.png"
+              alt="TimeCop"
+              className="rounded-full bg-red-500 w-[75px] aspect-square"
+            />{" "}
+            <p className="flex flex-col">
+              <span className="text-[#FF7733] font-bold">b0nes</span>{" "}
+              <a
+                target="_blank"
+                href="https://twitter.com/b0nesFAFZ"
+                className="cursor-pointer"
+              >
+                Link 2 Twitter
+              </a>
+            </p>
+          </div>
+          <div className="flex items-center gap-[.5rem]">
+            <img
+              src="/IMG-5937.png"
+              alt="TimeCop"
+              className="rounded-full bg-red-500 w-[75px] aspect-square"
+            />
+            <p className="flex flex-col">
+              <span className="text-[#FF7733] font-bold">TimeCop</span>{" "}
+              <a
+                target="_blank"
+                href="https://twitter.com/TimeCop0487"
+                className="cursor-pointer"
+              >
+                Link 2 Twitter
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </main>
