@@ -12,6 +12,7 @@ export default async function handler(req, res) {
     let uri = await c.tokenURI(id);
     let { data } = await axios.get(formatURI(uri));
     let img_buffer = await getBufferFromImg(formatURI(data.image));
+
     let { hex, imgText } = getColorsFromMetadata(data.attributes);
     let imageData = await generateImage(hex, imgText, img_buffer);
     res.setHeader("Content-Type", Jimp.MIME_PNG);
@@ -45,11 +46,6 @@ const generateImage = async (hex, text, imgBuffer) => {
   // Create a new Jimp image object with the specified background color and dimensions
   const jimpImg = new Jimp(WIDTH, HEIGHT, hex);
   const dir = path.join(process.cwd(), "data", "font");
-  //   const fontPath = path.join(
-  //     "data",
-  //     "font",
-  //     "OnBcukLVpLJksloVQuiwrbM5.ttf.fnt"
-  //   );
   // Load the desired fognt
   let font = await Jimp.loadFont(`${dir}/OnBcukLVpLJksloVQuiwrbM5.ttf.fnt`);
   // Add the text to the image at the top center position
