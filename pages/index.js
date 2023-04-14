@@ -18,6 +18,7 @@ export default function Home() {
 
     // Make a request to the API route to generate the image.
     const response = await fetch(`/api/generate?id=${tokenId}`);
+    console.log(response.blob);
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
     console.log({ url });
