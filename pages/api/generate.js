@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     res.setHeader("Content-Length", imageData.length);
     res.send(imageData);
   } catch (err) {
-    res.send(500).send({ message: err.message });
+    res.status(500).send({ message: err.message });
   }
 }
 
